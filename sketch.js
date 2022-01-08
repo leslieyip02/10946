@@ -100,8 +100,8 @@ function addBox() {
     if (unoccupied.length === 1) {
       previousState = copyGrid(gameGrid);
       if (gameOver()) {
-        console.log("GAME OVER")
-        console.table(gameGrid);
+        score = ":-(";
+        console.log("GAME OVER");
       }
     }
   }
