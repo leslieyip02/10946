@@ -4,7 +4,7 @@
 // Global variables
 let gameGrid;
 let gridNum = 5;
-let gridWidth = (window.innerHeight > window.innerWidth) ? 350 : 400;
+let gridWidth = (window.innerHeight > window.innerWidth) ? (Math.floor(window.innerWidth * 0.9 / 50) * 50) : 400;
 let w = gridWidth / gridNum;
 let margin = gridWidth * 0.03;
 let standardBorder = { color: null, weight: margin / 3 };
