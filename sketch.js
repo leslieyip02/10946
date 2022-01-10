@@ -4,7 +4,7 @@
 // Global variables
 let gameGrid;
 let gridNum = 5;
-let gridWidth = (window.innerHeight > window.innerWidth) ? window.innerWidth * 0.9 : 400;
+let gridWidth = (window.innerHeight > window.innerWidth) ? 350 : 400;
 let w = gridWidth / gridNum;
 let margin = gridWidth * 0.03;
 let standardBorder = { color: null, weight: margin / 3 };
@@ -27,7 +27,7 @@ class Box {
     this.y = y * w + margin / 2;
     this.w = w - margin;
     this.moving = false;
-    this.newPosition = { x: null, y: null }
+    this.newPosition = { x: null, y: null };
 
     // Math
     this.val = val;
@@ -50,11 +50,11 @@ class Box {
     // Update moving to false once done
     if (this.x == a && b == null) {
       this.moving = false;
-      this.newPosition = { x: null, y: null }
+      this.newPosition = { x: null, y: null };
     }
     if (a == null && this.y == b) {
       this.moving = false;
-      this.newPosition = { x: null, y: null }
+      this.newPosition = { x: null, y: null };
     }
   }
   copy() {
@@ -499,7 +499,8 @@ function drawBoxes() {
         rect(box.x, box.y, box.w, box.w, 4);
         // Draw text
         stroke(box.stroke)
-        textFont("Trebuchet MS", box.fontSize);
+        let fontSizeMultiplier = (window.innerHeight > window.innerWidth) ? 0.8 : 1;
+        textFont("Trebuchet MS", box.fontSize * fontSizeMultiplier);
         textAlign(CENTER, CENTER);
         fill(255);
         noStroke();
