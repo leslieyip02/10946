@@ -499,8 +499,7 @@ function drawBoxes() {
         rect(box.x, box.y, box.w, box.w, 4);
         // Draw text
         stroke(box.stroke)
-        let fontSizeMultiplier = (window.innerHeight > window.innerWidth) ? 0.8 : 1;
-        textFont("Trebuchet MS", box.fontSize * fontSizeMultiplier);
+        textFont("Trebuchet MS", box.fontSize);
         textAlign(CENTER, CENTER);
         fill(255);
         noStroke();
