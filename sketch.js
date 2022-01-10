@@ -499,7 +499,7 @@ function drawBoxes() {
         rect(box.x, box.y, box.w, box.w, 4);
         // Draw text
         stroke(box.stroke)
-        textFont("Trebuchet MS", box.fontSize);
+        textFont("Trebuchet MS", box.fontSize * (gridWidth / 400));
         textAlign(CENTER, CENTER);
         fill(255);
         noStroke();
