@@ -3,7 +3,7 @@ body {
 }
 
 #header {
-  width: 350px;
+  width: 80vw;
   display: grid;
   grid-template-areas: "title score-label score-label"
                        "title score score"
