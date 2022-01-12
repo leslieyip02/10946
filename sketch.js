@@ -362,8 +362,8 @@ function combine(dir) {
   return tmpGrid;
 }
 function move(dir) {
+  if (typeof score == "string") score = 0;
   previousScore = score;
-  if (typeof score == "string") previousScore = 0;
   // Check if any boxes are still moving
   for (let j = 0; j < gridNum; j ++) {
     for (let i = 0; i < gridNum; i ++) {
