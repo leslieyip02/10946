@@ -1,5 +1,5 @@
 # 10946
-2048 but its the Fibonacci Sequence
+2048 but it's the Fibonacci Sequence
 
 ### Description
 *10946* is a recreation of the popular game, *2048*. In the original game, players can swipe on the screen to combine equal numbers in a particular direction, with the goal of reaching 2048. In my adaptation, the game follows the logic of the Fibonacci sequence, so only numbers that are adjacent on the sequence can be merged. Despite the name of the game, the game can continue until no more valid moves are available.
